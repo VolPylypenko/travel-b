@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates&display=swap');
+
+:root {
+    --accent-color: #50ada9;
+    --main-color: black;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+header nav .logo {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 3rem;
+    text-align: right;
+    color: var(--accent-color);
+    margin-top: 10px;
+}
+
+header nav .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+}
+
+header nav .menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+header nav .menu a:hover {
+    color: var(--accent-color)
+}
+
+@media (min-width: 600px) {
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+}
+
+header nav .menu {
+    flex: 1;
+}
+
+header .banner {
+    background-image: url(../img/mountains-baner.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .banner h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+article.posts img {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .blog-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+
+@media (min-width: 960px) {
+    .blog-list{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.search {
+    width: 500px;
+    height: 40px;
+    margin: 0px auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius:  3px;
+    border: 1px solid #fff;
+
+}
+
+.search input {
+    width: 370px;
+    padding: 10px 5px;
+    float: left;
+    color: #ccc;
+    border: 0;
+    background: transparent;
+    border-radius: 3px 0 0 3px;
+}
+
+.search input:focus {
+    outline: 0;
+    background:transparent;
+}
+
+.search button {
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    background: transparent;
+    border-left: 1px solid #fff;
+    border-radius: 0 3px 3px 0;
+}
+
+.search button:hover {
+    background: #fff;color:#444;
+}
+.search button:active {
+    box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+.search button:focus {
+    outline: 0;
+}
